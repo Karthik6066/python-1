@@ -1,0 +1,438 @@
+”WRITE A PYTHON PROGRAM TO DEMONSTRATE THE WORKING OF PRINT TO DISPLAY 
+VARIOUS MESSAGES”””
+print('HELLO WORLD')
+print("HELLO WORLD")
+print('HELLO WORLD','WELCOME')
+print("it's not a C language")
+print('welcome to ece','welcome to cse','welcome to eee','welcome to it')
+print('welcome to ece\n','welcome to cse\n','welcome to eee\n','welcome to it')
+print('welcome to ece','welcome to cse','welcome to eee','welcome to it',sep='\n')
+print('welcome to ece','welcome to cse','welcome to eee','welcome to it',sep=',',end='*')
+print('\nwelcome to \
+aits \
+rajampet')
+a=5
+print('a=',a)
+print('a=%d'%a)
+print('a={}'.format(a))
+myfile=open('ece.txt','w')
+print('welcome to ece branch',file=myfile)
+myfile.close()
+print('welcome')
+print()
+print('hello')
+"""
+OUTPUT:
+HELLO WORLD
+HELLO WORLD
+HELLO WORLD WELCOME
+it's not a C language
+welcome to ece welcome to cse welcome to eee welcome to it
+welcome to ece
+welcome to cse
+welcome to eee
+welcome to it
+welcome to ece
+welcome to cse
+welcome to eee
+welcome to it
+welcome to ece,welcome to cse,welcome to eee,welcome to it*
+welcome to aits rajampet
+a= 5
+a=5
+a=5
+welcome
+hello
+"""
+
+
+
+#write a python program to demonstrate literals,varaibles, identifiers and data types
+a=0B1010 #binary integer literal
+b=0b0101 #binary integer literal
+c=123 #decimal integer literal
+d=0o12 #octal integer literal
+e=0XA #hexa decimal integer literal
+f=2.5638978965 #float literal
+comp=2+3.5j #complex literal
+str1='hello welcome' #string literal
+str2="hello welcome" #string literal
+str3='''welcome to
+aits 
+rajampet''' #string literal
+ch='E' #character literal
+x=True+5 # boolean literal
+y=False+6 # boolean literal
+print(a,b,c,d,e,str1,str2,str3,ch,format(f,'.2f'),comp,comp.real,comp.imag,sep='\n')
+print(x,y)
+l=[1,'ECE',2.5] #list literal
+print(l) 
+t=(1,'ece',2.5) #tuple literal
+print(t)
+d={1:'ece',2:'cse',3:'eee'} #dictionary literal
+print(d)
+s={1,2,3} #set literal
+print(s)
+num=25
+a=b=c=50
+x,y,z=1,'ece',2.5
+name='aits'
+my_tax=0.08
+print(num,a,b,c,x,y,z,name,my_tax)
+print(num)
+print(id(num))
+k=20
+print(k)
+print(id(k))
+print(type(num))
+print(type(name))
+"""
+OUTPUT:
+10
+5
+123
+10
+10
+hello welcome
+hello welcome
+welcome to
+aits 
+rajampet
+E
+2.56
+(2+3.5j2.0
+3.5
+6 6
+[1, 'ECE', 2.5]
+(1, 'ece', 2.5)
+{1: 'ece', 2: 'cse', 3: 'eee'}
+{1, 2, 3}
+25 50 50 50 1 ece 2.5 aits 0.08
+25
+1450043696
+20
+1450043616
+<class 'int'>
+<class 'str'>
+
+
+
+
+#arithmetic operators
+a=5
+b=2
+print('<====arithemtic operators====>',end='\n')
+print('a+b:',a+b)
+print('a-b:',a-b)
+print('a/b:',a/b)
+print('a*b:',a*b)
+print('a%b:',a%b)
+print('a//b:',a//b)
+print('a**b:',a**b)
+#logical operators
+a=(1>5)
+b=(2<5)
+print('<====logical operators====>',end='\n')
+print('a and b:',a and b)
+print('a or b:',a or b)
+print('not a:',not a)
+#Bitwise operators
+a=5
+b=2
+print('<====Bitwise operators====>',end='\n')
+print('a&b:',a&b)
+print('a|b:',a|b)
+print('~b:',~b)
+print('a^b:',a^b)
+print('a<<b:',a<<b)
+print('a>>b:',a>>b)
+#Comparision operators
+a=5
+b=2
+print('<====Comparision operators====>',end='\n')
+print('a==b:',a==b)
+print('a!=b:',a!=b)
+print('a<b:',a<b)
+print('a>b:',a>b)
+print('a>=b:',a>=b)
+print('a<=b:',a<=b)
+#Assignment Operators
+print('<====Assignment operators====>',end='\n')
+a=5
+print('a=:',a)
+a&=3
+print('a&=3:',a)
+a|=3
+print('a|=3:',a)
+a^=3
+print('a^=3:',a)
+a<<=3
+print('a<<=3:',a)
+#arithmetic operators
+a=5
+b=2
+print('<====arithemtic operators====>',end='\n')
+print('a+b:',a+b)
+print('a-b:',a-b)
+print('a/b:',a/b)
+print('a*b:',a*b)
+print('a%b:',a%b)
+print('a//b:',a//b)
+print('a**b:',a**b)
+#logical operators
+a=(1>5)
+b=(2<5)
+print('<====logical operators====>',end='\n')
+print('a and b:',a and b)
+print('a or b:',a or b)
+print('not a:',not a)
+#Bitwise operators
+a=5
+b=2
+print('<====Bitwise operators====>',end='\n')
+print('a&b:',a&b)
+print('a|b:',a|b)
+print('~b:',~b)
+print('a^b:',a^b)
+print('a<<b:',a<<b)
+print('a>>b:',a>>b)
+#Comparision operators
+a=5
+b=2
+print('<====Comparision operators====>',end='\n')
+print('a==b:',a==b)
+print('a!=b:',a!=b)
+print('a<b:',a<b)
+print('a>b:',a>b)
+print('a>=b:',a>=b)
+print('a<=b:',a<=b)
+#Assignment Operators
+print('<====Assignment operators====>',end='\n')
+a=5
+print('a=:',a)
+a&=3
+print('a&=3:',a)
+a|=3
+print('a|=3:',a)
+a^=3
+print('a^=3:',a)
+a<<=3
+print('a<<=3:',a)
+a!=b: True
+a<b: False
+a>b: True
+a>=b: True
+a<=b: False
+<====Assignment operators====>
+a=: 5
+a&=3: 1
+a|=3: 3
+a^=3: 0
+a<<=3: 0
+a>>=3: 0
+a+=3: 9
+a-=3: 6
+a*=3: 18
+a/=3: 6.0
+a//=3: 2.0
+a**=3: 8.0
+<====Identity operators====>
+l1 is l3: True
+l1 is l2: False
+l1 is not l2: True
+l1 == l2: True
+<====Membership operators====>
+ece in l3: True
+eee in l2: True
+eee not in l2 True
+
+
+
+
+#WRITE A PYTHON PROGRAM TO FIND EMPLOYEE GROSS SALARY
+employee_basic=int(input('Enter Employee Basic Salary:'))
+employee_da=float(input('Enter Employee DA%:'))
+employee_hra=float(input('Enter Employee HRA%:'))
+amount_da=(employee_basic*employee_da)/100
+amount_hra=(employee_basic*employee_hra)/100
+gross_salary=employee_basic+amount_da+amount_hra
+print('Employee Basic Salary is:',employee_basic)
+print('Employee DA Amount is:',amount_da)
+print('Employee HRA Amount is:',amount_hra)
+print('Employee Gross Salary is:',gross_salary)
+"""
+OUTPUT:
+Enter Employee Basic Salary:14600
+Enter Employee DA%:25.23
+Enter Employee HRA%:40.25
+Employee Basic Salary is: 14600
+Employee DA Amount is: 3683.58
+Employee HRA Amount is: 5876.5
+Employee Gross Salary is: 24160.08
+"""
+
+
+
+
+
+#WRITE A PYTHON PROGRAM TO FIND ROOTS OF QUDRATIC EQUATION
+a=float(input('enter a value:'))
+b=float(input('enter b value:'))
+c=float(input('enter c value:'))
+r=b**2-4*a*c
+if(r>0):
+ print('the roots are real and unequal')
+ r1=(-b+r**0.5)/(2*a)
+ r2=(-b-r**0.5)/(2*a)
+ print('the roots are:',r1,'\t',r2)
+elif(r==0):
+ print('the roots are real and equal')
+ root=-b/(2*a)
+ print('the roots are:',root,'\t',root)
+else:
+ print('The roots are imaginary')
+ root1=(-b+(r**0.5))/(2*a)
+ root2=(-b-(r**0.5))/(2*a)
+ print('The root are:',root1,'and',root2)
+"""
+OUTPUT:
+enter a value:1
+enter b value:5
+enter c value:6
+the roots are real and unequal
+the roots are: -2.0 -3.0
+
+
+
+
+'''Write a C program to input electricity unit charge and calculate the total electricity bill 
+according to the given condition:
+For first 50 units Rs. 0.50/unit
+For next 100 units Rs. 0.75/unit
+For next 100 units Rs. 1.20/unit
+For unit above 250 Rs. 1.50/unit
+An additional surcharge of 20% is added to the bill.'''
+unit=int(input('Enter Total units Consumed:'))
+if(unit<=50):
+ amount=unit*0.50
+elif(unit<=150):
+ amount=25+((unit-50)*0.75)
+elif(unit<=250):
+ amount=100+((unit-150)*1.20)
+else:
+ amount=220+((unit-250)*1.50)
+sub_charge=(amount*20)/100
+electric_bill=amount+sub_charge
+print('Electricity Bill for %d units is Rs:%.2f'%(unit,electric_bill))
+"""
+OUTPUT:
+Enter Total units Consumed:150
+Electricity Bill for 150 units is Rs:120.00
+
+
+
+
+#write a python program to demonstrate the working of for loop.
+#initailization
+esum=osum=0
+numbers=[1,2,3,4,5,6,7,8,9,10]
+for i in numbers:
+ if i%2==0:
+ esum+=i
+ else:
+ osum+=i
+print('Summation of even numbers:',esum)
+print('Summation of add numbers:',osum)
+"""
+OUTPUT:
+Summation of even numbers: 30
+Summation of add numbers: 25
+
+
+
+#write a python program to display sum of squares for the first n natural numbers
+num=int(input('Enter Your number:'))
+sum=0
+for i in range(num+1):
+ sum+=i**2
+print('Sum of Squares for the first',num,'numbers is:',sum)
+"""
+OUTPUT:
+Enter Your number:5
+Sum of Squares for the first 5 numbers is: 55
+"""
+
+
+
+
+#write a python program to display reverse of a number
+num=int(input('Enter Your Number:'))
+original=num
+reverse=0
+while original!=0:
+ rem=original%10;
+ reverse=reverse*10+rem
+ original//=10
+print('Reverse of a',num,'is:',reverse)
+"""
+OUTPUT:
+Enter Your Number:123456
+Reverse of a 123456 is: 654321
+"""
+
+
+
+
+#write a python progrm to find whethe the number is armstrong number or not
+num=int(input('Enter your number:'))
+length=len(str(num))
+sum=0
+original=num
+while original!=0:
+ rem=original%10
+ sum+=rem**length
+ original//=10
+if num==sum:
+ print(num,'is an Armstrong Number')
+else:
+ print(num,'is not an Armstrong Number')
+"""
+OUTPUT:
+Enter your number:153
+153 is an Armstrong Number
+
+
+
+
+
+"""
+#WRITE A PYTHON PROGRAM TO FIND PRIME NUMBERS BETWEEN THE RANGE
+start=int(input('Enter starting range:'))
+end=int(input('Enter Ending range:'))
+print('The Prime Numbers between',start,'and',end,'are')
+for num in range(start,end+1):
+ if num>1:
+ for i in range(2,num):
+ if(num%i==0):
+ break
+ else:
+ print(num)
+"""
+OUTPUT:
+Enter starting range:1
+Enter Ending range:20
+The Prime Numbers between 1 and 20 are
+2
+3
+5
+7
+11
+13
+17
+19
+
+
+
+
+
+
