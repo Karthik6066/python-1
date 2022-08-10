@@ -435,4 +435,665 @@ The Prime Numbers between 1 and 20 are
 
 
 
+RITE A PYTHON PROGRAM TO DEMONSTRATE WORKING OF LIST IN PYTHON AND IT'S 
+OPERATIONS 
+mylist=[1,2,3,4] 
+new=[10,11] 
+newlist=[15,12,13,12] 
+#length 
+print('length of mylist is:',len(mylist)) 
+#accessing 
+print('The first element is:',mylist[0]) 
+print('The second element is:',mylist[1]) 
+print('The third element is:',mylist[2]) 
+print('The fourth element is:',mylist[3]) 
+#slicing 
+print('mylist[0:3]',mylist[0:3]) 
+print('mylist[:2]',mylist[:2]) 
+print('mylist[1:]',mylist[1:]) 
+print('mylist[-3:-1]',mylist[-3:-1]) 
+print('mylist[::-1]',mylist[::-1]) 
+#append 
+mylist.append(5) 
+print('After append,the list is:',mylist) 
+#insert 
+mylist.insert(1,6) 
+print('After insert,the list is:',mylist) 
+mylist.append(new) 
+print('After append,the list is:',mylist) 
+#extend 
+mylist.extend(newlist) 
+print('After extend,the list is:',mylist) 
+#accessing 
+print('The sixth element is:',mylist[6]) 
+print('The seventh element is:',mylist[7]) 
+print('The eight element is:',mylist[8]) 
+print('The sixth of zero index element is:',mylist[6][0]) 
+#remove 
+newlist.remove(12) 
+print('after remove ,the list is:',newlist) 
+#del 
+del newlist[2] 
+print('after delete ,the list is:',newlist) 
+#pop 
+print('before pop() ,the list is:',mylist) 
+mylist.pop() 
+print('after pop() ,the list is:',mylist) 
+print('before pop(6) ,the list is:',mylist) 
+mylist.pop(6) 
+print('after pop(6) ,the list is:',mylist) 
+#clear 
+print('before clear() ,the list is:',new) 
+new.clear() 
+print('after clear() ,the list is:',new)
+#count 
+l1=[1,2,2,3,3,4,2] 
+print('count(2) is:',l1.count(2)) 
+#index 
+print('index(2) is:',l1.index(2)) 
+#sort 
+mylist.sort() 
+print('Sorting is:',mylist) 
+mylist.sort(reverse=True) 
+print('Sorting is:',mylist) 
+#reverse 
+mylist.reverse()
+
+
+
+print('Reverse list is:',mylist) 
+#copy and assigning 
+l1=[1,2,3] 
+l2=l1 
+print(l1,l2) 
+l1[0]=4 
+print(l1,l2) 
+l2=l1.copy() 
+print(l1,l2) 
+l1[0]=5 
+print(l1,l2) 
+l2=list(l1) 
+print(l1,l2) 
+l1[0]=6 
+print(l1,l2) 
+#max,min & sum 
+print('Max of mylist is:',max(mylist)) 
+print('Min of mylist is:',min(mylist)) 
+print('sum of mylist is:',sum(mylist)) 
+#all,any 
+val1=[1,2,3,4,0] 
+print('all:',all(val1)) 
+print('any:',any(val1)) 
+val2=[1,2,3,4,5] 
+print('all:',all(val2)) 
+print('any:',any(val2)) 
+val3=[None,None,None,False] 
+print('all:',all(val3)) 
+print('any:',any(val3)) 
+#enumerate 
+branch=['ece','eee','cse'] 
+obj=enumerate(branch) 
+print('Return Type:',type(obj)) 
+for (i,j) in enumerate(branch): 
+print('The',i,'element is:',j) 
+#ord,chr 
+name='AITS' 
+n=[] 
+m=[] 
+for i in name: n.append(ord(i)) 
+for j in n: 
+m.append(chr(j)) 
+print(n,m) 
+#comparison 
+l1=[1,2,4,5] 
+l2=[1,2,5,8] 
+l3=[1,2,5,8,10] 
+l4=[1,2,4,5] 
+print(l2>l1) 
+print(l2<l3) 
+print(l1==l4) 
+''' 
+OUTPUT 
+length of mylist is: 4 
+The first element is: 1 
+The second element is: 2 
+The third element is: 3 
+The fourth element is: 4 
+mylist[0:3] [1, 2, 3] 
+mylist[:2] [1, 2] 
+mylist[1:] [2, 3, 4] 
+mylist[-3:-1] [2, 3]
+
+mylist[::-1] [4, 3, 2, 1] 
+After append,the list is: [1, 2, 3, 4, 5] 
+After insert,the list is: [1, 6, 2, 3, 4, 5] 
+After append,the list is: [1, 6, 2, 3, 4, 5, [10, 11]] 
+After extend,the list is: [1, 6, 2, 3, 4, 5, [10, 11], 15, 12, 13, 12] 
+The sixth element is: [10, 11] 
+The seventh element is: 15 
+The eight element is: 12 
+The sixth of zero index element is: 10 
+after remove ,the list is: [15, 13, 12] 
+after delete ,the list is: [15, 13] 
+before pop() ,the list is: [1, 6, 2, 3, 4, 5, [10, 11], 15, 12, 13, 12] 
+after pop() ,the list is: [1, 6, 2, 3, 4, 5, [10, 11], 15, 12, 13] 
+before pop(6) ,the list is: [1, 6, 2, 3, 4, 5, [10, 11], 15, 12, 13] 
+after pop(6) ,the list is: [1, 6, 2, 3, 4, 5, 15, 12, 13] 
+before clear() ,the list is: [10, 11] 
+after clear() ,the list is: [] 
+count(2) is: 3 
+index(2) is: 1 
+Sorting is: [1, 2, 3, 4, 5, 6, 12, 13, 15] 
+Sorting is: [15, 13, 12, 6, 5, 4, 3, 2, 1] 
+Reverse list is: [1, 2, 3, 4, 5, 6, 12, 13, 15] 
+[1, 2, 3] [1, 2, 3] 
+[4, 2, 3] [4, 2, 3] 
+[4, 2, 3] [4, 2, 3] 
+[5, 2, 3] [4, 2, 3] 
+[5, 2, 3] [5, 2, 3] 
+[6, 2, 3] [5, 2, 3] 
+Max of mylist is: 15Min of mylist is: 1 
+sum of mylist is: 61 
+all: False 
+any: True 
+all: True 
+any: True 
+all: False 
+any: False 
+Return Type: <class 'enumerate'> 
+The 0 element is: ece 
+The 1 element is: eee 
+The 2 element is: cse 
+[65, 73, 84, 83] ['A', 'I', 'T', 'S']
+True 
+True 
+True
+
+
+
+
+#write a python program to convert temperature from fahrenheit to celsius and vice versa
+print('Enter (F) to convert temperature from fahrenheit to celsius')
+print('Enter (C) to convert temperature from celsius to fahrenheit ')
+print('Enter (X) to Exit')
+while True:
+ input_temp=input('Enter your value:')
+ if(input_temp=='F' or input_temp=='f'):
+ fahren_temp=float(input('Enter fahrenheit temperature to convert:'))
+ celsius_temp=(fahren_temp-32)*5/9
+ print(fahren_temp,'degress fahrenheit equals',format(celsius_temp,'.2f'),'degree celsuis')
+ elif(input_temp=='C' or input_temp=='c'):
+ celsuis_temp=float(input('Enter celsuis temperature to convert:'))
+ fahren_temp=(9/5*celsuis_temp)+32
+ print(celsuis_temp,'degree celsuis equals',format(fahren_temp,'.2f'),'degree fahrenheit')
+ else:
+ print('Thank You.....')
+ exit()
+ 
+'''
+OUTPUT:
+Enter (F) to convert temperature from fahrenheit to celsius
+Enter (C) to convert temperature from celsius to fahrenheit 
+Enter (X) to Exit
+Enter your value:F
+Enter fahrenheit temperature to convert:100
+100.0 degress fahrenheit equals 37.78 degree celsuis
+Enter your value:C
+Enter celsuis temperature to convert:25.28
+25.28 degree celsuis equals 77.50 degree fahrenheit
+Enter your value:X
+Thank You.....
+
+
+
+
+
+'''#write a python program to demonstrate the working nested list 
+grade=[[80,85,90],[75,84,92],[96,75,86]] 
+exavg=[] 
+clsavg=[] 
+for i in range(len(grade)): 
+print('Student',grade.index(grade[i])+1,'marks:',grade[i]) 
+for k in range(len(grade)): 
+summ=0 
+avg=0 
+for j in range(len(grade[k])): 
+print('Exam',k+1,'marks:',grade[j][k]) 
+summ+=grade[j][k] 
+avg=format(float(summ/len(grade)),'.2f') 
+print('Summation of Exam{}:{}'.format(k+1,summ)) 
+print('Average of Exam{}:{}'.format(k+1,avg)) 
+exavg.append(avg) 
+print('class average marks of each exam are:',exavg) 
+m=0 
+while m<len(grade): 
+summ=grade[m][0]+grade[m][1]+grade[m][2] 
+cavg=format(float(summ/len(grade)),'.2f') 
+clsavg.append(cavg) 
+m+=1 
+print('class average marks of each student are:',clsavg) 
+''' 
+OUTPUT: 
+Student 1 marks: [80, 85, 90] 
+Student 2 marks: [75, 84, 92] 
+Student 3 marks: [96, 75, 86] 
+Exam 1 marks: 80 
+Exam 1 marks: 75 
+Exam 1 marks: 96 
+Summation of Exam1:251 
+Average of Exam1:83.67 
+Exam 2 marks: 85 
+Exam 2 marks: 84 
+Exam 2 marks: 75 
+Summation of Exam2:244 
+Average of Exam2:81.33 
+Exam 3 marks: 90 
+Exam 3 marks: 92 
+Exam 3 marks: 86 
+Summation of Exam3:268 
+Average of Exam3:89.33 
+class average marks of each exam are: ['83.67', '81.33', '89.33'] 
+class average marks of each student are: ['85.00', '83.67', '85.67']
+
+
+
+
+#write a python program to demonstrate the working of list comprehension 
+squares=[x**2 for x in [1,2,3,4]] 
+print('Squares:',squares) 
+cubes=[x**3 for x in [1,2,3,4]] 
+print('cubes:',cubes) 
+even=[x for x in range(1,11) if x%2==0] 
+print('Even:',even) 
+odd=[x for x in range(1,11) if x%2!=0] 
+print('Odd:',odd) 
+nums=[-1,1,-2,2,-3,3,-4,4] 
+new=[x for x in nums if x>0] 
+print('Positives:',new) 
+name='welcome to aits' 
+vow=[v for v in name if v in 'aeiou'] 
+print('Vowels:',vow) 
+print([ord(ch) for ch in 'AITS']) 
+mylist=[2,5.2,'ece','aits',.8,4,6,'cse'] 
+print([x for x in mylist if(type(x)==int)]) 
+print([x for x in mylist if(type(x)==float)]) 
+print([x for x in mylist if(type(x)==str)]) 
+#summation of cubes 
+print([sum([x**3 for x in range(1,21)])]) 
+#temperature 
+temp=[80,84,85,100,95,101,120,98] 
+print([t for t in temp if t>=100]) 
+print([format((t-32)*5/9,'.2f') for t in temp if t<100]) 
+#uppercase 
+print([s.upper() for s in 'aits']) 
+#vowel comparision 
+print([x if x in 'aeiou' else '*' for x in 'aits']) 
+#prime number 
+print([p for p in range(2,20) if all(p%y!=0 for y in range(2,p))]) 
+#fibonacci 
+fibo=[0,1] 
+[fibo.append(fibo[-2]+fibo[-1]) for i in range(0,9)] 
+print(fibo) 
+„‟‟‟OUTPUT: 
+Squares: [1, 4, 9, 16] 
+cubes: [1, 8, 27, 64] 
+Even: [2, 4, 6, 8, 10] 
+Odd: [1, 3, 5, 7, 9] 
+Positives: [1, 2, 3, 4] 
+Vowels: ['e', 'o', 'e', 'o', 'a', 'i'] 
+[65, 73, 84, 83] 
+[2, 4, 6] 
+[5.2, 0.8] 
+['ece', 'aits', 'cse'] 
+[44100] 
+[100, 101, 120] 
+['26.67', '28.89', '29.44', '35.00', '36.67'] 
+['A', 'I', 'T', 'S']['a', 'i', '*', '*'] 
+[2, 3, 5, 7, 11, 13, 17, 19] 
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+
+
+
+
+'''#write a python program to demonstrate the working of tuple in python 
+t=(1,2,3) 
+print(t) 
+print(t[0]) 
+print(t[-1]) 
+del t 
+t=() 
+print(t) 
+t1=(1) 
+print(type(t1)) 
+t1=(1,) 
+print(type(t1)) 
+t2=('ece','eee','cse') 
+print(t2) 
+t3=(1,2,3,4,6,5) 
+print(t3) 
+t4=t2+t3 
+print(t4) 
+print(t4[2:4]) 
+print(t4[: :-1]) 
+print(len(t4)) 
+t5=(t2,t3) 
+print(t5) 
+print(t5[0]) 
+print(t5[0][1]) 
+print(any(t3)) 
+print(all(t3)) 
+print(sorted(t3,reverse=True)) 
+print(sum(t3)) 
+print(max(t3)) 
+print(min(t2)) 
+tuple1=tuple('aits') 
+print(tuple1) 
+print(tuple1[2]) 
+for x in enumerate(t2): 
+print(x) 
+''' 
+OUTPUT: 
+(1, 2, 3) 
+1
+3 
+() 
+<class 'int'> 
+<class 'tuple'> 
+('ece', 'eee', 'cse') 
+(1, 2, 3, 4, 6, 5) 
+('ece', 'eee', 'cse', 1, 2, 3, 4, 6, 5) 
+('cse', 1) 
+(5, 6, 4, 3, 2, 1, 'cse', 'eee', 'ece') 
+9 
+(('ece', 'eee', 'cse'), (1, 2, 3, 4, 6, 5)) 
+('ece', 'eee', 'cse')eee 
+True 
+True 
+[6, 5, 4, 3, 2, 1] 
+21 
+6 
+cse 
+('a', 'i', 't', 's')
+t 
+(0, 'ece') 
+(1, 'eee') 
+(2, 'cse')
+
+
+
+'''PROGRAMS ON DICTIONARY & SET TYPE: 
+#WRITE A PYTHON PROGRAM TO DEMONTARTE THE WORKING OF VARIOUS OPERATIONS 
+ON DICTIONARY 
+mydict={ 
+'college':'AITS', 
+'branch':'ECE', 
+'count':65 
+} 
+print('My Dictionary is:',mydict) 
+#length 
+print('Length of dictionary is:',len(mydict)) 
+#accessing 
+print('First Element:',mydict['college']) 
+print('Second Element:',mydict['branch']) 
+print('Third Element:',mydict['count']) 
+print('First Element using get():',mydict.get('college')) 
+#adding 
+mydict['count']=60 
+mydict['course']='B.Tech' 
+print('After adding:',mydict) 
+mydict.update({'branch':'cse','count':63}) 
+print(mydict) 
+mydict.update({'name':'nag','num':1241}) 
+print(mydict) 
+mylist=[['a',1],['b',2]] 
+mydict.update(dict(mylist)) 
+print(mydict) 
+#removing 
+del mydict['count'] 
+print(mydict) 
+val=mydict.pop('course') 
+print(val,'was deleted.',mydict) 
+val=mydict.popitem() 
+print(val,'was deleted.',mydict) 
+#mydict.clear() 
+print(mydict) 
+#setdefault() 
+x=mydict.setdefault('college','aitsr') 
+print(x) 
+print(mydict) 
+#fromkeys() 
+x=(1,2,3) 
+y=('ece','cse','eee') 
+z=dict.fromkeys(x,y) 
+print(z) 
+#keys() 
+for x in mydict.keys(): 
+print(x) 
+#values() 
+for x in mydict.values(): 
+print(x)#items() 
+for x in mydict.items(): 
+print(x) 
+#copy() 
+new=mydict.copy() 
+print(new) 
+''' 
+OUTPUT: 
+My Dictionary is: {'college': 'AITS', 'branch': 'ECE', 'count': 65} 
+Length of dictionary is: 3 
+First Element: AITS 
+Second Element: ECE
+Third Element: 65 
+First Element using get(): AITS 
+After adding: {'college': 'AITS', 'branch': 'ECE', 'count': 60, 'course': 'B.Tech'} 
+{'college': 'AITS', 'branch': 'cse', 'count': 63, 'course': 'B.Tech'} 
+{'college': 'AITS', 'branch': 'cse', 'count': 63, 'course': 'B.Tech', 'name': 'nag', 'num': 1241} 
+{'college': 'AITS', 'branch': 'cse', 'count': 63, 'course': 'B.Tech', 'name': 'nag', 'num': 1241, 'a': 1, 
+'b': 2} 
+{'college': 'AITS', 'branch': 'cse', 'course': 'B.Tech', 'name': 'nag', 'num': 1241, 'a': 1, 'b': 2} 
+B.Tech was deleted. {'college': 'AITS', 'branch': 'cse', 'name': 'nag', 'num': 1241, 'a': 1, 'b': 2} 
+('b', 2) was deleted. {'college': 'AITS', 'branch': 'cse', 'name': 'nag', 'num': 1241, 'a': 1} 
+{'college': 'AITS', 'branch': 'cse', 'name': 'nag', 'num': 1241, 'a': 1} 
+AITS 
+{'college': 'AITS', 'branch': 'cse', 'name': 'nag', 'num': 1241, 'a': 1} 
+{1: ('ece', 'cse', 'eee'), 2: ('ece', 'cse', 'eee'), 3: ('ece', 'cse', 'eee')} 
+college 
+branch 
+name 
+num 
+a 
+AITS 
+cse 
+nag 
+1241 
+1 
+('college', 'AITS') 
+('branch', 'cse') 
+('name', 'nag') 
+('num', 1241)
+('a', 1) 
+{'college': 'AITS', 'branch': 'cse', 'name': 'nag', 'num': 1241, 'a': 1}
+
+
+''' 
+'''#write a python program to demonstrate the working of mutable arguments in python 
+functions 
+def findsum(num): 
+for x in range(len(num)): 
+if num[x]<0: 
+num[x]=0 
+return sum(num) 
+mylist=[] 
+size=int(input('Enter size of list:')) 
+for k in range(size): 
+mylist.append(int(input('Enter value:'))) 
+print('My list is:',mylist) 
+result=findsum(mylist) 
+print('My list is:',mylist) 
+print('Result is:',result) 
+''' 
+OUTPUT: 
+Enter size of list:5 
+Enter value:-1 
+Enter value:2 
+Enter value:3 
+Enter value:-7 
+Enter value:5 
+My list is: [-1, 2, 3, -7, 5] 
+My list is: [0, 2, 3, 0, 5] 
+Result is: 10
+
+
+
+
+
+'''#WRITE A PYTHON PROGRAM TO DEMONTARTE THE WORKING OF VARIOUS 
+OPERATIONS ON SET 
+s={} 
+print(type(s)) 
+s=set() 
+print(type(s)) 
+s1={1,2,3,4,5,6,4,3,2} 
+print('myset is:',s1) 
+#len() 
+print('My set length is:',len(s1)) 
+#copy() 
+s3=s1.copy() 
+print('After copy:',s3) 
+#add() 
+s1.add(8) 
+print('After add:',s1) 
+#update() 
+s1.update(['ece','cse']) 
+print('After Update:',s1) 
+#remove() 
+s1.remove(2) 
+print('After remove:',s1) 
+#discard() 
+s1.discard(8) 
+print('After discard:',s1) 
+#pop() 
+print('pop element is:',s1.pop()) 
+print('After pop:',s1) 
+#clear() 
+s1.clear() 
+print('After clear:',s1) 
+s1.update({1,2,3,'ece','cse',2.5}) 
+print('My New Set:',s1) 
+s2={1,2,4,5,6,'cse'} 
+print('set2 is:',s2) 
+#set operations 
+#union() 
+print('After union:',s1|s2) 
+print('After union:',s1.union(s2)) 
+#insection() 
+print('After intersection:',s1&s2) 
+print('After intersection:',s1.intersection(s2)) 
+#difference() 
+print('After differnece:',s1-s2) 
+print('After difference:',s1.difference(s2)) 
+print('After differnece:',s2-s1) 
+print('After difference:',s2.difference(s1)) 
+#symmetric_differnce() 
+print('After symmetric_differnece:',s1^s2) 
+print('After symmetric_difference:',s1.symmetric_difference(s2)) 
+''' 
+OUTPUT: 
+<class 'dict'> 
+<class 'set'> 
+myset is: {1, 2, 3, 4, 5, 6} 
+My set length is: 6 
+After copy: {1, 2, 3, 4, 5, 
+
+After add: {1, 2, 3, 4, 5, 6, 8} 
+After Update: {1, 2, 3, 4, 5, 6, 'cse', 8, 'ece'} 
+After remove: {1, 3, 4, 5, 6, 'cse', 8, 'ece'} 
+After discard: {1, 3, 4, 5, 6, 'cse', 'ece'} 
+pop element is: 1 
+After pop: {3, 4, 5, 6, 'cse', 'ece'} 
+After clear: set() 
+My New Set: {1, 2, 3, 2.5, 'ece', 'cse'} 
+set2 is: {1, 2, 4, 5, 6, 'cse'} 
+After union: {1, 2, 3, 2.5, 4, 'cse', 5, 6, 'ece'} 
+After union: {1, 2, 3, 2.5, 4, 'cse', 5, 6, 'ece'} 
+After intersection: {1, 2, 'cse'} 
+After intersection: {1, 2, 'cse'} 
+After differnece: {'ece', 2.5, 3} 
+After difference: {'ece', 2.5, 3} 
+After differnece: {4, 5, 6} 
+After difference: {4, 5, 6} 
+After symmetric_differnece: {'ece', 2.5, 3, 4, 5, 6} 
+After symmetric_difference: {'ece', 2.5, 3, 4, 5, 6} 
+'''PROGRAMS ON FUNCTIONS: 
+#WRITE A PYTHON PROGRAM TO PERFORM ADDITION BETWEEN TWO NUMBERS USING
+FUNCTION 
+def add(a,b): 
+"""this function display addition of two numbers""" 
+return(a+b) 
+a=int(input('Enter a value:')) 
+b=int(input('Enter b value:')) 
+result=add(a,b) 
+print('The addition of %d and %d is %d'%(a,b,result)) 
+''' 
+OUTPUT: 
+Enter a value:10 
+Enter b value:20 
+The addition of 10 and 20 is 30
+
+
+
+
+
+#write a python program to find factorial of a number using recursive function
+def recfact(n):
+ if(n!=0):
+ return n*recfact(n-1)
+ else:
+ return 1
+n=int(input('Enter n value:'))
+print('The factorial is:',recfact(n))
+'''
+OUTPUT:
+Enter n value:5
+The factorial is: 120
+'''
+#write a python program to display n Fibonacci series using recursive function
+def recfibo(n):
+ if(n==0):
+ return 0
+ elif n==1:
+ return 1
+ else:
+ return (recfibo(n-1)+recfibo(n-2))
+n=int(input('Enter n value:'))
+print('The fibonacci numbers are:')
+for x in range(0,n):
+ print(recfibo(x))
+'''
+OUTPUT:
+Enter n value:8
+The Fibonacci numbers are:
+0
+1
+1
+2
+3
+5
+8
+13
+'''
+#write a python program to find sum of natural numbers using recursive function
+def recsum(n):
+ if(n!=0):
+ return n+recsum(n-1)
+ else:
+ return 0
+n=int(input('Enter n value:'))
+print('The sum is:',recsum(n))
+'''
+OUTPUT:
+Enter n value:10
+The sum is: 5
+
+
 
