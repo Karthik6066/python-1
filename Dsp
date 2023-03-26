@@ -1,0 +1,262 @@
+DFT  FOR CONTINOUS SIGNAL
+clc;
+close all;
+clear all;
+t=0:0.01:10;
+f=1;
+x=square(2*pi*f*t);
+subplot(2,1,1);
+plot(t,x);
+title('input signal');
+y=fft(x); 
+ subplot(2,1,2);
+plot(t,y);
+title('dft for continous signal');
+xlabel('samples');
+ylabel('amplitude');
+
+
+clc;
+close all;
+clear all;
+x=input('enter the sequence');
+l=input('enter the length of the sequence');
+subplot(3,1,1);
+stem(x);
+xlabel('sequence');
+ylabel('amplitude');
+title('signal1');
+y=fft(x,l)
+ subplot(3,1,2);
+stem(y);
+xlabel('sequence');
+ylabel('amplitude');
+y1=real(y);
+subplot(3,1,3);
+stem(y1);
+xlabel('sequence');
+ylabel('amplitude');
+title('discrete fourier transformed signal');
+
+
+
+
+
+PROGRAM:
+close all;
+clear all;
+ clc; 
+x1=input('enter the sequence 1');
+x2=input('enter the sequence 2');
+subplot(3,1,1);
+stem(x1);
+xlabel('sequence');
+ylabel('amplitude');
+title('signal 1');
+subplot(3,1,2);
+stem(x2);	
+xlabel('sequence');
+ylabel('amplitude');
+title('signal 2');
+y=conv(x1,x2);	
+display y;
+subplot(3,1,3);
+stem(y);
+xlabel('sequence');
+ylabel('amplitude');
+title('convolution');
+
+
+
+
+disp('circular convolution program');
+x1=input('enter the first sequence:');
+n1=length(x1);
+x2=input('enter the second sequence:');
+n2=length(x2);
+n=max(n1,n2);
+n3=n1-n2;
+if  n3>0
+    x2=[x2,zeros(1,n3)];
+else
+    x1=[x1,zeros(1,n3)];
+ end
+y=cconv(x1,x2,n);
+subplot(3,1,1);
+stem(x1);
+xlabel('time');
+ylabel('amplitude');
+title('first sequence');
+subplot(3,1,2);
+stem(x2);
+xlabel('time');
+ylabel('amplitude');
+title('second sequence');
+subplot(3,1,3);
+stem(y);
+xlabel('time');
+ylabel('amplitude');
+disp('the circular convolution is:');
+disp(y);
+title('circular convolution');
+
+
+
+
+
+     PROGRAM:-
+     clc;
+    closeall;
+    clearall;
+    %frequency response 
+    num=input('enter num:');
+    denum=input('enter denum:');
+    
+    n=linspace(0,pi,1000);
+    h=freqz(num,denum,n);
+    mag=20*log(abs(h));
+    subplot(2,2,1);
+    semilogx(n,mag); 
+    xlabel('frequency index');
+    ylabel('magnitude');
+    title('magnitude response');
+    pha=angle(h); 
+    subplot(2,2,2);
+    semilogx(n,pha);
+    xlabel('frequency index');
+    ylabel('phase');
+    title('phase response'); 
+    z=tf(num,denum,1);
+
+
+
+
+
+clc;
+clearall;
+closeall;
+xn=input('enter the sequence');
+N=input('enter the length');
+p=length(xn);
+if N>p
+xn=[xn,zeros(1,N-p)];
+else
+xn=xn;
+end;
+lev=log2(N);
+x=bitrevorder(xn);
+tw=exp(-1j*2*pi*(0:N/2-1)/N);
+forlevn=1:lev
+    L=2^levn;
+    tw1=tw(1:N/L:N/2);
+for k=0:L:N-L;
+for n=0:L/2-1;
+            A=x(n+k+1);
+            B=x(n+k+(L/2)+1)*tw1(n+1);
+x(n+k+1)=A+B;
+x(n+k+(L/2)+1)=A-B;                 
+
+end
+end
+end
+L=0:N-1
+subplot(3,2,1);
+stem(L,xn);
+title('input');
+Xlabel('n');
+Ylabel('x(n)');
+subplot(3,2,2);
+stem(real(x));
+display(x);
+title('real part');
+Xlabel('samples');
+Ylabel('amplitude');
+subplot(3,2,3);
+stem(fft(xn));
+title('imaginary part');
+Xlabel('samples');
+Ylabel('amplitude');
+ansft=fft(xn);
+
+
+
+
+
+DIF-FFT PROGRAM:
+clc
+closeall
+clearall
+X=input('enter the sequence :');
+N=input('enter the point : ');
+n=length(X);
+x=[X zeros(1,N-n)];
+M=log2(N);
+for m=1:M
+    d=2^(M-m+1);
+for l=1:d:(N-d+1)
+for k=0:(d/2)-1
+            w=exp(-1i*2*pi*k/d);
+            z1=x(l+k);
+            z2=x(l+k+d/2);
+x(l+k)=z1+z2;
+x(l+k+d/2)=(z1-z2)*w;
+end
+end
+end
+y=bitrevorder(x);
+subplot(3,1,1);
+stem(real(X));
+title('input sequence');
+subplot(3,1,2);
+stem(real(y));
+title('real response');
+subplot(3,1,3);
+stem(imag(y));
+title('imaginary response');
+disp(y);
+
+
+
+clc;									Roll No:
+close all;
+clear all;
+num=input('enter the numarator');
+den=input('enter the denaminator');
+sys=tf(num,den);
+p=pole(sys);
+p1=real(p);
+if p1>=0
+    display('system is unstable');
+else
+    display('system is stable');
+end
+pzmap(sys);
+
+
+
+
+
+
+Clc;                                      Roll NO:
+close all;
+clear all;
+nn=-64:63;
+unit_impluse=(nn==0);
+unit_step=(nn>0);
+b=[1 0];
+a=[1 -0.77];
+y=filter (b,a,unit_impluse);
+subplot(2,1,1);
+plot(nn,y);
+title('dsp lab,impluse response of h(z)=1/(1-0.77z^(-1))');
+xlabel('n');
+ylabel('amplitude');
+y2=filter(b,a,unit_step);
+subplot(2,1,2);
+plot(nn,y2);
+title('lab 4 part 1,step response of h(z)=1/(1-0.77z^(-1))');
+xlabel('n');
+ylabel('amplitude');
+
+
+
